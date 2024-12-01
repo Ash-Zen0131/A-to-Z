@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Computer Accessories Shop</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+ <!-- Theme: "My Computer Accessories Shop" -->
+<body>
+    <div class="type" style="padding-bottom : 350px;">
+    <header>
+            <table class="navs">
+               <tr>
+                  <td class="active"><a href="index.html" ><i class="uil uil-home"></i></a></td>
+                  <td><a href="Product.html"><i class="uil uil-store-alt"></i></a></td>
+                  <td><a href="service.html"><i class="uil uil-servicemark"></i></a></td>
+                  <td><a href="payment.html"><i class="uil uil-cloud-info"></i></a></td>
+               </tr>
+            </table>
+    </header>
+    </div>
+    <div class="container">
+
+        <div class="slider">
+            <video src="Razer Viper Ultimate .mp4" autoplay loop muted></video>
+            <video src="ROG Strix Flare II Animate .mp4" autoplay loop muted></video>
+            <video src="Alienware m15 Laptop Product Video (m15).mp4" autoplay loop muted></video>
+        </div>
+        <div class="navbtns">
+            <button onclick="pretbn();">
+                <i class="uil uil-angle-left"></i>
+            </button>
+            <button onclick="nextbn();">
+                <i class="uil uil-angle-right"></i>
+            </button>
+        </div>
+
+        <div class="welcome">
+            <h1>welcome to A-to-Z shop</h1>
+        </div>
+            <p id="top"><b>TOP SALES PRODUCT</b></p>
+        <div class="content-index">
+                <div class="fav-box">
+                    <div class="img">
+                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRYtVhP_eYwSvnBlnccSf66Qn2a-F90gyM4Rw1fxnBwuTR1TPPw5ECUHbU5ON9-0loE8Is1mlF8IcESYCL4B96poQ5ed5lJa9YIPEb-osQ&usqp=CAE" alt="">
+                    </div>
+                    <div class="details">
+                        <p >Razer Viper V3 HyperSpeed Wireless Gaming Mouse | 82g Lightweight | Up to 280 Hr Battery | 30K DPI Optical Sensor | Mechanical Switches | On-mouse DPI Control</p>
+                        <button class="link" ><a href="https://shopee.com.my/product/141942477/3432953152?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkWVp3RFo3Mkw5czd4Z0hzdEF1WVFibVdXWmhpcXZIU3NLVGZ3eGV3TkVnQ1B2V2RyelhSU3ZJeEQxOUQxY056eTlhQTRwNVpTTTJhNjF1VjEzOU9IT3JuRmtvTWdnOU5WZ0FTYkswdFJKNEI&gad_source=1">BUY ME</a></button>
+                    </div>
+                </div>
+                <div class="fav-box">
+                    <div class="img">
+                        <img src="https://my-test-11.slatic.net/p/a53571c4f4e33eebd8d32c0b1295c95d.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <p >NEW RK R75 RK ROYAL KLUDGE SkyCyan 80 Key Gasket Wired Mechanical Keyboard</p>
+                        <button class="link" ><a href="https://shopee.com.my/product/173145183/23085613726?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVHQ3ZkZSUTMrR3pBWmZZNzdrcnRBM0lEdzk0c3R3WXJWa2srams2MllRbmhnSXZiVTZhbDlQOWZwTDBQcko4bXlCVDFIS0V4dllKd2xCM0xkZmxpSWpmekE5VjhrL01ldXkzdEtuUjdwdmtXTG4yQXhBMGplZlJEdnVhQlRCMVhBPT0&gad_source=1">BUY ME</a></button>                    
+                    </div>
+                </div>
+                <div class="fav-box">
+                    <div class="img">
+                        <img src="https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-mouse-top-view-pale-gray.png?v=1" alt="">
+                    </div>
+                    <div class="details">
+                        <p >Logitech MX Master 3S / 2S Wireless Mouse [Quiet Clicks/Electromagnetic Scrolling/2.4Ghz Wireless/Bluetooth/Type-C]</p>
+                        <button class="link" ><a href="https://shopee.com.my/product/173145183/23085613726?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVHQ3ZkZSUTMrR3pBWmZZNzdrcnRBM0lEdzk0c3R3WXJWa2srams2MllRbmhnSXZiVTZhbDlQOWZwTDBQcko4bXlCVDFIS0V4dllKd2xCM0xkZmxpSWpmekE5VjhrL01ldXkzdEtuUjdwdmtXTG4yQXhBMGplZlJEdnVhQlRCMVhBPT0&gad_source=1">BUY ME</a></button>                    
+                    </div>
+                </div>
+        </div>
+    </div>
+   <footer>
+            <p>copyright </p>
+        </footer>
+    <script>
+
+        const slides = document.querySelectorAll('video');
+        var counter = 0;
+
+        slides.forEach(
+            (slide,index) => {
+                slide.style.left = `${index * 100}%`;
+            }
+        )
+
+        function slideclip(){
+            slides.forEach(
+                slide => {slide.style.transform = `translateX(-${counter * 100}%)`;
+        })
+        }
+
+        const nextbn = () =>{
+            counter++;
+            slideclip();
+        if (counter == 3){
+            counter = 0;
+            slideclip();
+        }
+    }
+        const pretbn = () =>{
+            counter--;
+            slideclip();
+        if (counter == -1){
+            counter = 2;
+            slideclip();
+        }
+    }
+  
+    </script>
+
+</body>
+</html>

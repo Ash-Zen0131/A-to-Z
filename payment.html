@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Computer Accessories Shop</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+ <!-- Theme: "My Computer Accessories Shop" -->
+<body>
+<div class="type">
+  <header>
+    <table class="navs">
+       <tr>
+          <td><a href="index.html" ><i class="uil uil-home"></i></a></td>
+          <td><a href="Product.html"><i class="uil uil-store-alt"></i></a></td>
+          <td><a href="service.html"><i class="uil uil-servicemark"></i></a></td>
+          <td class="active"><a href="payment.html"><i class="uil uil-cloud-info"></i></a></td>
+       </tr>
+    </table>
+</header>
+</div>
+
+    <!-- Form Section -->
+    <div class="container-form">
+        <h1>Checkout Form</h1>
+    
+        <!-- Form Section -->
+        <div class="form-section">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+    
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="e.g. 123-456-7890">
+    
+            <label for="payment">Type of Payment:</label>
+            <select id="payment" name="payment" required>
+                <option value="">Select payment method</option>
+                <option value="credit_card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank_transfer">Bank Transfer</option>
+            </select>
+        </div>
+    
+        <!-- Checkbox Table Section -->
+        <div class="checkout-table">
+            <h3>Select Products:</h3>
+            <table class="item_box">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Product Name</th>
+                        <th>Option</th>
+                        <th>Price (RM)</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody class="check-tbl">
+                    <!-- Product 1 with 8 options -->
+                    <tr>
+                        <td><input type="checkbox" id="product1" name="product1"></td>
+                        <td>Mouse</td>
+                        <td>
+                            <select id="product1-option" name="product1-option" onchange="updatePrice('product1')">
+                                <option data-price="110">Razer Viper V3 HyperSpeed</option>
+                                <option data-price="312">Logitech MX Master 3S</option>
+                                <option data-price="214">ERGO M575</option>
+                                <option data-price="160">M720 Triathlon</option>
+                                <option data-price="183">Signature M650</option>
+                                <option data-price="201">Razer DeathAdder Essential</option>
+                                <option data-price="82">Fantech RAIGOR II WG10</option>
+                                <option data-price="64">FANTECH PHANTOM II VX6</option>
+                            </select>
+                        </td>
+                        <td id="price1">RM110.00</td>
+                        <td><input type="number" id="product1-quantity" name="product1-quantity" min="1" value="1"></td>
+                    </tr>
+                    <!-- Product 2 with 8 options -->
+                    <tr>
+                        <td><input type="checkbox" id="product2" name="product2"></td>
+                        <td>Monitor</td>
+                        <td>
+                            <select id="product2-option" name="product2-option" onchange="updatePrice('product2')">
+                                <option  data-price="65">Behringer HPM1100</option>
+                                <option  data-price="87">SONY WH-CH720N</option>
+                                <option  data-price="49">SONY MDR-X09AP</option>
+                                <option  data-price="81">ONIKUMA K19</option>
+                                <option  data-price="103">Lenovo th30</option>
+                                <option  data-price="95">KTW-28</option>
+                                <option  data-price="57">JBLLL TUNE 510BT</option>
+                                <option  data-price="219">Marshall Major 1</option>
+                            </select>
+                        </td>
+                        <td id="price2">RM65.00</td>
+                        <td><input type="number" id="product2-quantity" name="product2-quantity" min="1" value="1"></td>
+                    </tr>
+                    <!-- Product 3 with 8 options -->
+                    <tr>
+                        <td><input type="checkbox" id="product3" name="product3"></td>
+                        <td>Keyboard</td>
+                        <td>
+                            <select id="product3-option" name="product3-option" onchange="updatePrice('product3')">
+                                <option data-price="220">Machenike K500 B61</option>
+                                <option data-price="122">Thunderobot K78</option>
+                                <option data-price="224">K68</option>
+                                <option data-price="126">Leaven K620</option>
+                                <option data-price="128">AULA F3261</option>
+                                <option data-price="330">Xiaomi Mi</option>
+                                <option data-price="232">TECWARE VEIL 87</option>
+                                <option data-price="340">YUNZII YZ75 Pro</option>
+                            </select>
+                        </td>
+                        <td id="price3">RM220.00</td>
+                        <td><input type="number" id="product3-quantity" name="product3-quantity" min="1" value="1"></td>
+                    </tr>
+                    <!-- Product 4 with 8 options -->
+                    <tr>
+                        <td><input type="checkbox" id="product4" name="product4"></td>
+                        <td>Laptop</td>
+                        <td>
+                            <select id="product4-option" name="product4-option" onchange="updatePrice('product4')">
+                                <option data-price="2500">Lenovo ThinkPad</option>
+                                <option data-price="2700">Acer Nitro V15</option>
+                                <option data-price="2900">LENOVO CHROMEBOOK 300e</option>
+                                <option data-price="3100">HP Victus</option>
+                                <option data-price="3900">Dell Inspiron 15</option>
+                                <option data-price="3300">Lenovo LOQ 15IAX9</option>
+                                <option data-price="3500">LENOVO THINKPAD X1</option>
+                                <option data-price="3700">LENOVO Ideapad 1 15IJL7</option>
+                            </select>
+                        </td>
+                        <td id="price4">RM2500.00</td>
+                        <td><input type="number" id="product4-quantity" name="product4-quantity" min="1" value="1"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Submit Section -->
+        <div class="submit-section">
+            <button type="button" class="btn" onclick="showPopup()">Checkout</button>
+        </div>
+    </div>
+    
+    <!-- Popup Section -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div class="popup" id="popup">
+        <h3 style="text-align: center;">Order Summary</h3>
+        <p><strong>Username:</strong> <span id="popup-username"></span></p>
+        <p><strong>Location:</strong> <span id="popup-location"></span></p>
+        <p><strong>Phone Number:</strong> <span id="popup-phone"></span></p>
+        <p><strong>Type of Payment:</strong> <span id="popup-payment"></span></p>
+        <p><strong><a href="" ><u>QR link</u></a></strong></p>
+        <p><strong>Items:</strong></p>
+        <ul id="popup-items"></ul>
+        <p><strong style="font-size: 30px;">Total Payment: RM<span id="popup-total"></span></strong></p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+    
+    <footer>
+        <p>copyright </p>
+    </footer>
+
+<script>
+    // Update price based on selected option
+    function updatePrice(productId) {
+        const selectedOption = document.querySelector(`#${productId}-option`);
+        const priceCell = document.getElementById(`price${productId.charAt(productId.length - 1)}`);
+        const quantityInput = document.getElementById(`${productId}-quantity`);
+        const selectedPrice = selectedOption.options[selectedOption.selectedIndex].getAttribute("data-price");
+        
+        // Update price in the table
+        priceCell.textContent = `RM${selectedPrice}`;
+        
+        // Update quantity and total price on the fly
+        const totalPrice = selectedPrice * quantityInput.value;
+        priceCell.setAttribute('data-total', totalPrice);
+    }
+
+    // Show popup with the order summary
+    function showPopup() {
+        const username = document.getElementById("username").value;
+        const location = document.getElementById("location").value;
+        const phone = document.getElementById("phone").value;
+        const payment = document.getElementById("payment").value;
+
+        // Check if all fields are filled out
+        if (!username || !location || !phone || !payment || !isAnyProductChecked()) {
+            alert("Please fill in all the fields and select at least one product.");
+            return;
+        }
+
+        let total = 0;
+        let itemsHTML = '';
+
+        // Collect selected items
+        ['product1', 'product2', 'product3', 'product4'].forEach((product, index) => {
+            const productCheckbox = document.getElementById(product);
+            if (productCheckbox.checked) {
+                const option = document.getElementById(`${product}-option`);
+                const price = option.options[option.selectedIndex].getAttribute("data-price");
+                const quantity = document.getElementById(`${product}-quantity`).value;
+                const itemTotal = price * quantity;
+
+                itemsHTML += `<li>${option.options[option.selectedIndex].text} - RM${itemTotal}</li>`;
+                total += itemTotal;
+            }
+        });
+
+        // Update popup content
+        document.getElementById("popup-username").textContent = username;
+        document.getElementById("popup-location").textContent = location;
+        document.getElementById("popup-phone").textContent = phone;
+        document.getElementById("popup-payment").textContent = payment;
+        document.getElementById("popup-items").innerHTML = itemsHTML;
+        document.getElementById("popup-total").textContent = total.toFixed(2);
+
+        // Show popup
+        document.getElementById("popup-overlay").style.display = "block";
+        document.getElementById("popup").style.display = "block";
+    }
+
+    // Close the popup
+    function closePopup() {
+        document.getElementById("popup-overlay").style.display = "none";
+        document.getElementById("popup").style.display = "none";
+    }
+
+    // Check if any product is selected
+    function isAnyProductChecked() {
+        return document.querySelector('input[type="checkbox"]:checked') !== null;
+    }
+</script>
+
+</body>
+</html>

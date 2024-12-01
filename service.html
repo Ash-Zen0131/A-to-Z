@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Computer Accessories Shop</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+ <!-- Theme: "My Computer Accessories Shop" -->
+<body>
+<div class="type">
+  <header>
+    <table class="navs">
+       <tr>
+          <td><a href="index.html" ><i class="uil uil-home"></i></a></td>
+          <td><a href="Product.html"><i class="uil uil-store-alt"></i></a></td>
+          <td class="active"><a href=""><i class="uil uil-servicemark"></i></a></td>
+          <td><a href="payment.html"><i class="uil uil-cloud-info"></i></a></td>
+       </tr>
+    </table>
+</header>
+</div>
+
+<p id="top" style="margin-top: 150px;"><b>TYPE OF SERVICE</b></p>
+
+<div class="img_slider">
+    <div class="list">
+        <div class="items">
+            <div class="overlay">
+                <div class="text">
+                <h2>Laptop Repair Service</h2>
+                <p>We provide expert repairs for all laptop issues, including performance problems, screen damage, software malfunctions, and more. Our technicians offer fast, reliable, and affordable services to get your laptop working like new.</p>
+              
+                <h3>Our Services:</h3>
+                <ul>
+                  <li>Screen Repairs & Replacements</li>
+                  <li>Battery & Charging Issues</li>
+                  <li>Keyboard & Touchpad Repairs</li>
+                  <li>Software & OS Issues</li>
+                  <li>Hardware Upgrades</li>
+                  <li>Overheating & Fan Repairs</li>
+                  <li>Data Recovery & Backup</li>
+                </ul>
+              
+                <p>Fast service and warranty on all repairs. Get your laptop back in top shape today!</p>
+              </div>
+            </div>
+            <img src="https://www.mycomputerrepair.com.my/wp-content/uploads/2024/07/Computer-Repair-Malaysia.jpg" alt="">
+        </div>
+        <div class="items">
+            <div class="overlay">  
+                <div class="text">
+                    <h2>Deep Laptop & PC Cleaning</h2>
+                    <p>Our <strong>Deep Cleaning Service</strong> improves your device’s performance by removing dust, dirt, and grime that can cause overheating and slowdowns. We ensure optimal airflow and restore your system’s efficiency.</p>
+                  
+                    <h3>What We Do:</h3>
+                    <ul>
+                      <li>Internal Dust Removal</li>
+                      <li>Thermal Paste Reapplication</li>
+                      <li>Fan & Airflow Cleaning</li>
+                      <li>External Surface Cleaning</li>
+                    </ul>
+                  
+                    <p>Keep your device running smoothly and cool. Book your cleaning today!</p>
+                  </div>
+            </div>
+            <img src="https://www.budgetpcupgraderepair.com/wp-content/uploads/2023/11/volta-pc-computer-cleaning-service.jpg" alt="">
+        </div>
+        <div class="items">
+            <div class="overlay">                
+                <div class="text">
+                    <h2>Cash on Delivery (COD) Service</h2>
+                    <p>Our <strong>COD Service</strong> allows you to pay for repairs only when the work is complete. Pay the full amount upon delivery or pickup, ensuring you’re satisfied with the service before payment.</p>
+                  
+                    <h3>Benefits:</h3>
+                    <ul>
+                      <li>Pay only when satisfied</li>
+                      <li>Secure and convenient payment</li>
+                      <li>Available for pickup or delivery</li>
+                    </ul>
+                  
+                    <p>Enjoy hassle-free payments with our COD option. Book your service today!</p>
+                  </div>
+                </div>
+            <img src="https://delyva.com/my/wp-content/themes/yootheme/cache/delyva-cod-malaysia-cb854931.jpeg" alt="">
+        </div>
+        <div class="items">
+            <div class="overlay">
+                <div class="text">
+                    <h2>Mobile Repair Service</h2>
+                    <p>Our <strong>Mobile Repair Service</strong> offers fast, reliable, and affordable solutions for common mobile issues. Whether it's a cracked screen, battery problems, or software glitches, our expert technicians ensure quick repairs with high-quality parts.</p>
+                  
+                    <h3>Services Include:</h3>
+                    <ul>
+                      <li>Screen & Battery Repairs</li>
+                      <li>Charging Port & Camera Fixes</li>
+                      <li>Software Updates & Bug Fixes</li>
+                      <li>Water Damage Repair</li>
+                    </ul>
+                  
+                    <p>Get your phone back to perfect condition with our fast, affordable repairs. Book today!</p>
+                  </div>
+            </div>
+            <img src="https://daganghalal.blob.core.windows.net/42995/Product/mobile-phone-repair-services-1708933306109.jpg" alt="">
+        </div>
+    </div>
+    <div class="tonggle">
+        <button id="prev" onclick="prevbn();"><i class="uil uil-angle-left"></i></button>
+        <button id="next" onclick="nextbn();"><i class="uil uil-angle-right"></i></button>
+    </div>
+
+    <ul class="dots">
+        <li class="actives" onclick="goToSlide(0);"></li>
+        <li onclick="goToSlide(1);"></li>
+        <li onclick="goToSlide(2);"></li>
+        <li onclick="goToSlide(3);"></li>
+    </ul>
+</div>
+<footer>
+    <p>copyright </p>
+</footer>
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.items');
+    const dots = document.querySelectorAll('.dots li');
+
+    function updateSlider() {
+        const newTransform = -currentIndex * 100;
+        document.querySelector('.list').style.transform = `translateX(${newTransform}%)`;
+
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.remove('actives');
+            if (index === currentIndex) {
+                dot.classList.add('actives');
+            }
+        });
+    }
+
+    function prevbn() {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        updateSlider();
+    }
+
+    function nextbn() {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    // Initialize the slider
+    updateSlider();
+</script>
+</body>
+</html>
